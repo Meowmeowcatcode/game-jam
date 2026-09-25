@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dsntnsmo80cu0"]
+
+[ext_resource type="Script" uid="uid://c5fds73vvjhdy" path="res://movement.gd" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://cu5glesidtteb" path="res://icon.svg" id="2_wa5vi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjt0s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wa5vi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wa5vi")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wa5vi")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfnr8"]
+size = Vector2(128, 128)
+
+[node name="character" type="Node" unique_id=1204999887]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1830235735]
+script = ExtResource("1_pjt0s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1473154483]
+position = Vector2(445, 255)
+sprite_frames = SubResource("SpriteFrames_pjt0s")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=90664712]
+position = Vector2(445, 255)
+shape = SubResource("RectangleShape2D_wfnr8")
