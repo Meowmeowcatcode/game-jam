@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bbff2j6mc3j3c"]
 
+[ext_resource type="Script" uid="uid://cojd27h30kf7t" path="res://DragDropGrid.gd" id="1_i7nv3"]
 [ext_resource type="Script" uid="uid://73xxaf5ox1i4" path="res://DragDropCell.gd" id="1_xaosd"]
 
 [node name="ColorRect" type="ColorRect" unique_id=399717391]
@@ -18,14 +19,61 @@ offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer" unique_id=765415199]
 layout_mode = 2
+alignment = 1
 
 [node name="Panel" type="Panel" parent="Control/PanelContainer/VBoxContainer" unique_id=1019640021]
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="Control/PanelContainer/VBoxContainer" unique_id=974126511]
 layout_mode = 2
+columns = 4
+script = ExtResource("1_i7nv3")
 
 [node name="Button" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=339379099]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button2" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=478112978]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button3" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=484775127]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button4" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=780300148]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button5" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=1789032671]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button6" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=1611950193]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button7" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=347397063]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button8" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=1567060929]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button9" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=265470744]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button10" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=1659596930]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button11" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=1495691437]
+layout_mode = 2
+script = ExtResource("1_xaosd")
+
+[node name="Button12" type="Button" parent="Control/PanelContainer/VBoxContainer/GridContainer" unique_id=1166654257]
 layout_mode = 2
 script = ExtResource("1_xaosd")
 
