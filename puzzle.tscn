@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cmchry3yrj46b"]
+
+[ext_resource type="PackedScene" uid="uid://dyv0vxoouu6nf" path="res://draggable.tscn" id="1_03ub4"]
+
+[node name="Puzzle" type="Node2D" unique_id=474482809]
+
+[node name="DraggableObjects" type="Node2D" parent="." unique_id=1808293128]
+
+[node name="Draggable2" parent="DraggableObjects" unique_id=645290643 instance=ExtResource("1_03ub4")]
+position = Vector2(809, 201)
+
+[node name="Draggable" parent="DraggableObjects" unique_id=181228693 instance=ExtResource("1_03ub4")]
+position = Vector2(561, 260)
+
+[node name="Draggable3" parent="DraggableObjects" unique_id=1027334403 instance=ExtResource("1_03ub4")]
+position = Vector2(247, 215)

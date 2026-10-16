@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://iosb2w0fsbmo"]
+
+[ext_resource type="Texture2D" uid="uid://cu5glesidtteb" path="res://icon.svg" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cmchry3yrj46b" path="res://puzzle.tscn" id="2_h2yge"]
+
+[node name="Main" type="Node" unique_id=548761962]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1324526096]
+position = Vector2(1200, 1380)
+scale = Vector2(60.039063, 40.578125)
+texture = ExtResource("1_0xm2m")
+
+[node name="Puzzle" parent="." unique_id=474482809 instance=ExtResource("2_h2yge")]
+position = Vector2(332, 306)

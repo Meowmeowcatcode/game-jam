@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="game jam"
-run/main_scene="uid://bbff2j6mc3j3c"
+run/main_scene="uid://iosb2w0fsbmo"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=2
 
 [physics]
 
