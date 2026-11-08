@@ -1,8 +1,28 @@
 [gd_scene format=3 uid="uid://cmchry3yrj46b"]
 
 [ext_resource type="PackedScene" uid="uid://dyv0vxoouu6nf" path="res://draggable.tscn" id="1_03ub4"]
+[ext_resource type="Script" uid="uid://3oe3t8ox0ht5" path="res://endpositions.gd" id="1_77j1r"]
+[ext_resource type="Texture2D" uid="uid://cu5glesidtteb" path="res://icon.svg" id="2_hgotr"]
+[ext_resource type="Script" uid="uid://bayjv0328dcw0" path="res://signal.gd" id="4_q2gwe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgotr"]
+radius = 40.04997
 
 [node name="Puzzle" type="Node2D" unique_id=474482809]
+
+[node name="endpositions" type="Node2D" parent="." unique_id=853047630]
+
+[node name="Area2D" type="Area2D" parent="endpositions" unique_id=931376183]
+script = ExtResource("1_77j1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="endpositions/Area2D" unique_id=1390582235]
+position = Vector2(111, 123)
+shape = SubResource("CircleShape2D_hgotr")
+
+[node name="Sprite2D" type="Sprite2D" parent="endpositions/Area2D" unique_id=1554777269]
+position = Vector2(111.75, 125.00001)
+scale = Vector2(0.44921875, 0.5156252)
+texture = ExtResource("2_hgotr")
 
 [node name="DraggableObjects" type="Node2D" parent="." unique_id=1808293128]
 
@@ -13,4 +33,9 @@ position = Vector2(809, 201)
 position = Vector2(561, 260)
 
 [node name="Draggable3" parent="DraggableObjects" unique_id=1027334403 instance=ExtResource("1_03ub4")]
-position = Vector2(247, 215)
+position = Vector2(286, 251)
+
+[node name="Node" type="Node" parent="." unique_id=1142842583]
+script = ExtResource("4_q2gwe")
+
+[connection signal="entered" from="Node" to="endpositions/Area2D" method="_on_node_entered"]

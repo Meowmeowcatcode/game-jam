@@ -8,11 +8,9 @@ var dragOffset := Vector2.ZERO #this is like how far you clicked on it from the 
 
 func _ready() -> void:
 	input_pickable = true #can detect if the mouse is on it 
-	input_event.connect(_on_input_event) #cant remeber what this does but if u delet it it all bresks
+	input_event.connect(_input_event) #cant remeber what this does but if u delet it it all bresks
 
-
-
-func _on_input_event(
+func _input_event(
 	_viewport : Node,
 	event: InputEvent,
 	_shape_idx: int
@@ -25,10 +23,8 @@ func start_draging() -> void:
 	dragging = true
 	dragOffset  = global_position - get_global_mouse_position()
 
-
 func stop_drag() -> void:
 	dragging = false
-	
 
 func _process(_delta: float) -> void: #this is to update the position of the object as  it being drgaed
 	if dragging:
@@ -39,5 +35,8 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			stop_drag() # stop dragginhg when user stops holdimg the button (otherwise thry drag forever)
 
-
-#
+func change_position():
+	if entered == true:
+		print("enetred")
+		print("we should change the position of draggable") 
+		global_position = get_node("..endpositions").global_position
